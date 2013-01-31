@@ -146,7 +146,11 @@ var totalValInArray = function (array) {
     return total;
 }
 
-
+// Sorted Value in an Array
+var sortValArray = function(key) {
+    var array = [{key:5}, {key:2}, {key:8}];
+    console.log(array.sort(function(a, b) {return a.key - b.key}));
+}
 // Return Values
 console.log(patEcheck("wjrivera247@fullsail.edu"));
 console.log(patEcheck("wjrivera247fullsail.edu"));
