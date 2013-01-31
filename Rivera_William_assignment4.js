@@ -9,6 +9,7 @@
 
 
 // My String
+
 // Email Pattern
     var patEcheck = function (myEmail) {
         var email = myEmail,
@@ -84,6 +85,7 @@ var phoneNumber = function (phonePatt) {
 
 */
 // Number Functions
+
 // Decimal Place Format
 var decimalPlace = function (number) {
     var newNumber;
@@ -112,6 +114,28 @@ var diffBtDates = function (dateW,dateR) {
     results[0] = results[1] / 24;
     return results;
 }
+
+//Return the Value as Number
+var stringToVal = function (number) {
+    return Number(number);
+}
+
+// Array Function
+
+// Smaller Value in an Array
+var smValArray = function (array,num) {
+    array.sort(function(a,b){return a-b;});
+    if (num >= array[0] && num < array[array.length-1]) {
+        array.push(num);
+        array.sort(function(a,b){return a-b;});
+        var result = array[array.lastIndexOf(num) + 1];
+        return result;
+    } else {
+        return null;
+    }
+}
+
+
 // Return Values
 console.log(patEcheck("wjrivera247@fullsail.edu"));
 console.log(patEcheck("wjrivera247fullsail.edu"));
@@ -128,3 +152,6 @@ var dateW = new Date(2013,8,14);
 var dateR = new Date(2013,5,13);
 var timeDifference = diffBtDates(dateW,dateR);
 console.log("Diference between the two dates is: " + timeDifference[0] + " dates and "+ "in hours is: " + timeDifference[1] + " hours");
+console.log(stringToVal("12261981"));
+var listVal = [2,9,5,13,25,8,14,12,26];
+console.log(smValArray(listVal,2));
