@@ -135,6 +135,17 @@ var smValArray = function (array,num) {
     }
 }
 
+// Total Values of the Numbers in an Array
+var totalValInArray = function (array) {
+    var total = 0;
+    for (var i = 0, t = array.length; i < t; i++) {
+        if (array[i]/1 === array[i]) {
+                total += array[i]
+        }
+    }
+    return total;
+}
+
 
 // Return Values
 console.log(patEcheck("wjrivera247@fullsail.edu"));
@@ -155,3 +166,6 @@ console.log("Diference between the two dates is: " + timeDifference[0] + " dates
 console.log(stringToVal("12261981"));
 var listVal = [2,9,5,13,25,8,14,12,26];
 console.log(smValArray(listVal,2));
+var totalList = [31,10,"bananas",3,2,30,"apple","50"];
+console.log(totalValInArray(totalList));
+sortValArray();
